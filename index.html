@@ -14,8 +14,63 @@
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
+
+      <!-- NAV -->
+<nav>
+  <a class="nav-logo" onclick="showPage('intro')">OLYMPUS</a>
+  <ul class="nav-links">
+    <li><a onclick="showPage('home')">Shop</a></li>
+    <li><a onclick="showPage('about')">About</a></li>
+    <li><a onclick="showPage('contact')">Contact</a></li>
+  </ul>
+  <button class="cart-btn" onclick="showPage('cart')">
+    Cart
+    <span class="cart-count" id="cart-count">0</span>
+  </button>
+  
+</nav>
     </nav>
   </header>
+
+  <!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<!-- ==================== INTRO PAGE ==================== -->
+<div class="page active" id="page-intro">
+  <div class="intro-bg" id="intro-bg"></div>
+  <div class="intro-overlay"></div>
+  <div class="intro-content">
+    <div class="intro-eyebrow">Olympus Garments — Est. 2024</div>
+    <div class="intro-title">OLY<span>MPUS</span></div>
+    <div class="intro-sub">Garments</div>
+    <div class="intro-slogan">Raw Expression, Designed for the World</div>
+    <div class="intro-nav">
+      <button class="intro-btn intro-btn-primary" onclick="showPage('home')">Explore Collection</button>
+      <button class="intro-btn intro-btn-secondary" onclick="showPage('about')">Our Story</button>
+      <button class="intro-btn intro-btn-secondary" onclick="showPage('contact')">Contact</button>
+    </div>
+  </div>
+  <div class="intro-scroll" onclick="showPage('home')">
+    <span>Explore</span>
+    <div class="scroll-line"></div>
+    
+  </div>
+</div>
+
+  <!-- ==================== HOME PAGE ==================== -->
+<div class="page" id="page-home">
+  <div class="hero">
+    <div class="hero-tape">Limited Edition Drop — SS2025 Collection Now Live</div>
+    <div class="hero-bg-grid"></div>
+    <div class="hero-content">
+      <div class="hero-tag">New Collection</div>
+      <h1 class="hero-title">AMPLIFY<br>YOUR <span class="accent">VOICE</span></h1>
+      <p class="hero-desc">Bold, limited-edition streetwear that bridges art and urban culture. Ethically produced. Globally expressed.</p>
+      <button class="btn-gold" onclick="document.getElementById('collection').scrollIntoView({behavior:'smooth'})">View Collection</button>
+    </div>
+    <img class="hero-corner-img" id="hero-img" alt="Olympus Garments">
+  </div>
+  
   <section class="hero">
     <h1>Olympus Garments</h1>
     <p>Diversifying culture through sustainable fashion.</p>
