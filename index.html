@@ -11,18 +11,26 @@
   <header>
     <img src="images/logo.png" alt="Olympus Logo" class="logo">
     <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
+     
 
       <!-- NAV -->
-<nav>
-  <a class="nav-logo" onclick="showPage('intro')">OLYMPUS</a>
-  <ul class="nav-links">
-    <li><a onclick="showPage('home')">Shop</a></li>
-    <li><a onclick="showPage('about')">About</a></li>
-    <li><a onclick="showPage('contact')">Contact</a></li>
-  </ul>
+    <nav>
+    <div class="nav-container">
+        <div class="logo">
+            <a href="index.html" style="text-decoration: none;">
+                <h1>OLYMPUS</h1>
+                <p>Raw Expression, Designed for the world</p>
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="cart.html" class="cart-link">🛒 Cart (<span id="cartCount">0</span>)</a>
+        </div>
+    </div>
+</nav>
   <button class="cart-btn" onclick="showPage('cart')">
     Cart
     <span class="cart-count" id="cart-count">0</span>
