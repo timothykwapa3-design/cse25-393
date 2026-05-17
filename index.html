@@ -70,6 +70,58 @@
     </div>
     <img class="hero-corner-img" id="hero-img" alt="Olympus Garments">
   </div>
+
+  <div class="cat-strip" id="cat-strip">
+    <button class="cat-item active" onclick="filterCat('All', this)">All</button>
+    <button class="cat-item" onclick="filterCat('Hoodie', this)">Hoodies</button>
+    <button class="cat-item" onclick="filterCat('Sweatshirt', this)">Sweatshirts</button>
+    <button class="cat-item" onclick="filterCat('Sweater', this)">Sweaters</button>
+    <button class="cat-item" onclick="filterCat('Jacket', this)">Jackets</button>
+    <button class="cat-item" onclick="filterCat('Jeans', this)">Denim</button>
+    <button class="cat-item" onclick="filterCat('Shirt', this)">Shirts</button>
+    <button class="cat-item" onclick="filterCat('T-Shirt', this)">Tees</button>
+  </div>
+
+  <div class="section-header" id="collection">
+    <h2 class="section-title">THE COLLECTION</h2>
+    <span class="section-count" id="collection-count">12 PIECES</span>
+  </div>
+
+  <div class="collection-grid" id="collection-grid"></div>
+
+  <!-- QUALITY SECTION -->
+  <div class="quality-section">
+    <div>
+      <div class="quality-heading">470gsm</div>
+      <p class="quality-body">
+        Our signature fabric weight defines the Olympus standard. 470gsm is a heavyweight construction renowned for its robustness, premium hand-feel, and lasting durability — built for the streets, made to endure. The density ensures every piece retains its structure through years of wear, making it the ideal choice for those who demand both luxury and longevity.
+      </p>
+      <p class="quality-body" style="margin-bottom:0">
+        Opting for Quality fabric is a commitment to a more luxurious feel and appearance — a garment that commands presence. Select pieces in our range feature this standard, denoted clearly on each product card.
+      </p>
+      <div class="quality-points">
+        <div class="quality-point">
+          <div class="quality-point-label">Fabric Weight</div>
+          <div class="quality-point-val">470gsm Heavyweight</div>
+        </div>
+        <div class="quality-point">
+          <div class="quality-point-label">Durability</div>
+          <div class="quality-point-val">Long-lasting</div>
+        </div>
+        <div class="quality-point">
+          <div class="quality-point-label">Ethics</div>
+          <div class="quality-point-val">Ethically Sourced</div>
+        </div>
+        <div class="quality-point">
+          <div class="quality-point-label">Packaging</div>
+          <div class="quality-point-val">Zero Waste</div>
+        </div>
+      </div>
+    </div>
+    <img id="quality-img" alt="Quality 470gsm fabric">
+  </div>
+</div>
+
   
   <section class="hero">
     <h1>Olympus Garments</h1>
@@ -78,12 +130,9 @@
   <section class="collections">
     <h2>Explore Our Collections</h2>
     <div class="grid">
-      <div class="card"><img src="images/sample-product.jpg" alt="T-shirt"><p>T-Shirts</p></div>
-      <div class="card"><img src="images/sample-product.jpg" alt="Skirts"><p>Skirts</p></div>
-      <div class="card"><img src="images/sample-product.jpg" alt="Pants"><p>Pants</p></div>
       <div class="card"><img src="images/sample-product.jpg" alt="Hoodies"><p>Hoodies</p></div>
-      <div class="card"><img src="images/sample-product.jpg" alt="Shirts"><p>Shirts</p></div>
-      <div class="card"><img src="images/sample-product.jpg" alt="Shorts"><p>Shorts</p></div>
+      <div class="card"><img src="images/sample-product.jpg" alt="Shirts"><p>Tops</p></div>
+      <div class="card"><img src="images/sample-product.jpg" alt="Shorts"><p>Bottoms</p></div>
     </div>
   </section>
   <footer>
