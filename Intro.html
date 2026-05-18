@@ -9,3 +9,27 @@
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Barlow+Condensed:wght@300;400;500;700;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
+  <!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<!-- ==================== INTRO PAGE ==================== -->
+<div class="page active" id="page-intro">
+  <div class="intro-bg" id="intro-bg"></div>
+  <div class="intro-overlay"></div>
+  <div class="intro-content">
+    <div class="intro-eyebrow">Olympus Garments — Est. 2024</div>
+    <div class="intro-title">OLY<span>MPUS</span></div>
+    <div class="intro-sub">Garments</div>
+    <div class="intro-slogan">Raw Expression, Designed for the World</div>
+    <div class="intro-nav">
+      <button class="intro-btn intro-btn-primary" onclick="showPage('home')">Explore Collection</button>
+      <button class="intro-btn intro-btn-secondary" onclick="showPage('about')">Our Story</button>
+      <button class="intro-btn intro-btn-secondary" onclick="showPage('contact')">Contact</button>
+    </div>
+  </div>
+  <div class="intro-scroll" onclick="showPage('home')">
+    <span>Explore</span>
+    <div class="scroll-line"></div>
+    
+  </div>
+</div>
