@@ -139,3 +139,43 @@ function updateSummary() {
   if (sub > 0) document.getElementById('s-shipping').textContent = 'P80';
   else document.getElementById('s-shipping').textContent = 'Calculated at checkout';
 }
+
+
+
+ <script>
+    /* ── Cart stored in localStorage ── */
+    function getCart() { return JSON.parse(localStorage.getItem('olympus-cart') || '[]'); }
+    function saveCart(c) { localStorage.setItem('olympus-cart', JSON.stringify(c)); }
+
+    function addToCart(btn, name, price) {
+      const cart = getCart();
+      const existing = cart.find(i => i.name === name);
+      if (existing) { existing.qty++; }
+      else { cart.push({ name, price, qty: 1 }); }
+      saveCart(cart);
+      btn.textContent = '✓ Added';
+      btn.classList.add('in-cart');
+      showToast(name + ' added to cart');
+    }
+
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      t.textContent = msg;
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 2600);
+    }
+
+    /* ── Category filter ── */
+    function filter(type, btn) {
+      document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const cards = document.querySelectorAll('.card');
+      let count = 0;
+      cards.forEach(c => {
+        const show = type === 'All' || c.dataset.type === type;
+        c.style.display = show ? '' : 'none';
+        if (show) count++;
+      });
+      document.getElementById('col-count').textContent = count + ' PIECE' + (count !== 1 ? 'S' : '');
+    }
+  </script>
