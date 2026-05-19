@@ -51,7 +51,18 @@
       <p class="hero-desc">Limited-edition streetwear that bridges art and urban culture. Locally produced. Globally expressed.</p>
       <button class="btn-gold" onclick="document.getElementById('collection').scrollIntoView({behavior:'smooth'})">View Collection</button>
     </div>
-    <img class="hero-corner-img" id="hero-img" alt="Olympus Garments">
+  </div>
+
+<!-- ═══════════ CATEGORY FILTER ═══════════ -->
+  <div class="cat-strip">
+    <button class="cat-btn active" onclick="filter('All',this)">All</button>
+    <button class="cat-btn" onclick="filter('Hoodie',this)">Winter wear</button>
+    <button class="cat-btn" onclick="filter('Sweatshirt',this)">Winter wear</button>
+    <button class="cat-btn" onclick="filter('Sweater',this)">Winter wear</button>
+    <button class="cat-btn" onclick="filter('Jacket',this)">Winter wear</button>
+    <button class="cat-btn" onclick="filter('Jeans',this)">Bottoms</button>
+    <button class="cat-btn" onclick="filter('Shirt',this)">Tops</button>
+    <button class="cat-btn" onclick="filter('T-Shirt',this)">Tops</button>
   </div>
 
   <section>
