@@ -30,23 +30,97 @@
     <span class="cart-count" id="cart-count">0</span>
   </button>
   
-</nav>
-    </nav>
-  </header>
-  <section class="contact">
-    <h1>Contact Us</h1>
-    <p>We value your feedback and inquiries. Please reach out to us below.</p>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Write your message here..." required></textarea>
-      <button type="submit">Send Messages</button>
-    </form>
-    <div class="contact-info">
-      <p><strong>Email:</strong> info@olympusgarments.com</p>
-      <p><strong>Address:</strong> 2036 Morwa streetview, Gaborone City</p>
+  <div class="faq-section">
+    <h2 class="faq-title">FAQ</h2>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">What sizes does Olympus offer?</div>
+      <div class="faq-a">We offer XS through 3XL across all garment categories. Size guides are available on each product page. Olympus cuts tend to run oversized — we recommend sizing down if you prefer a more fitted silhouette.</div>
     </div>
-  </section>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Are your drops truly limited edition?</div>
+      <div class="faq-a">Yes. Every Olympus collection is produced in a limited run. Once a piece sells out, it does not restock. This ensures that every garment remains rare, meaningful, and exclusive to those who move fast.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Do you ship internationally?</div>
+      <div class="faq-a">We ship globally to over 80 countries. Standard shipping takes 7–14 business days internationally. Express options are available at checkout. All orders are shipped in our signature zero-waste packaging.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">How do I care for my Olympus garment?</div>
+      <div class="faq-a">Cold wash, inside out, on a gentle cycle. Hang dry or tumble dry on low. Do not iron directly on printed or embroidered areas. Following these steps will preserve the integrity of your piece for years.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Can I collaborate or submit artwork?</div>
+      <div class="faq-a">Absolutely. Olympus is always seeking new creative voices. Send your portfolio and a short proposal to our contact page. We review all submissions and will respond within 14 days.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== CONTACT PAGE ==================== -->
+<div class="page" id="page-contact">
+  <div class="contact-layout">
+    <div class="contact-left">
+      <div class="contact-eyebrow">Get in Touch</div>
+      <h2 class="contact-heading">LET'S<br>TALK</h2>
+      <p class="contact-desc">Whether you want to place a wholesale enquiry, collaborate as an artist, or simply leave us feedback — we want to hear from you. Your voice shapes Olympus.</p>
+      <div class="contact-info-list">
+        <div class="contact-info-item">
+          <span class="contact-info-label">Email</span>
+          <span class="contact-info-value">hello@olympusgarments.com</span>
+        </div>
+        <div class="contact-info-item">
+          <span class="contact-info-label">Instagram</span>
+          <span class="contact-info-value">@olympus.garments</span>
+        </div>
+        <div class="contact-info-item">
+          <span class="contact-info-label">Location</span>
+          <span class="contact-info-value">Global — Est. Gaborone, BW</span>
+        </div>
+        <div class="contact-info-item">
+          <span class="contact-info-label">Response Time</span>
+          <span class="contact-info-value">Within 48 Hours</span>
+        </div>
+      </div>
+    </div>
+    <div class="contact-right">
+      <div class="form-group">
+        <label class="form-label">Full Name</label>
+        <input class="form-input" type="text" placeholder="Your name" id="c-name">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Email Address</label>
+        <input class="form-input" type="email" placeholder="your@email.com" id="c-email">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Subject</label>
+        <select class="form-select" id="c-subject">
+          <option value="">Select a subject</option>
+          <option>Product Enquiry</option>
+          <option>Artist Collaboration</option>
+          <option>Wholesale / Retail</option>
+          <option>Shipping & Returns</option>
+          <option>General Feedback</option>
+          <option>Press & Media</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Message</label>
+        <textarea class="form-textarea" placeholder="Tell us what's on your mind..." id="c-msg"></textarea>
+      </div>
+      <div class="form-group" style="margin-bottom:0">
+        <label class="form-label">Rating (Optional)</label>
+        <div style="display:flex;gap:8px;margin-top:4px" id="star-row">
+          <span class="star" data-v="1" onclick="setRating(1)" style="font-size:24px;cursor:pointer;color:#444;transition:color 0.2s">★</span>
+          <span class="star" data-v="2" onclick="setRating(2)" style="font-size:24px;cursor:pointer;color:#444;transition:color 0.2s">★</span>
+          <span class="star" data-v="3" onclick="setRating(3)" style="font-size:24px;cursor:pointer;color:#444;transition:color 0.2s">★</span>
+          <span class="star" data-v="4" onclick="setRating(4)" style="font-size:24px;cursor:pointer;color:#444;transition:color 0.2s">★</span>
+          <span class="star" data-v="5" onclick="setRating(5)" style="font-size:24px;cursor:pointer;color:#444;transition:color 0.2s">★</span>
+        </div>
+      </div>
+      <button class="form-submit" onclick="submitForm()">Send Message</button>
+      <div class="success-msg" id="success-msg">✓ Message sent. We'll be in touch within 48 hours.</div>
+    </div>
+  </div>
+</div>
   
     <!-- ==================== FOOTER ==================== -->
   <footer>
