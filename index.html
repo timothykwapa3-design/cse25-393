@@ -2,72 +2,255 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Olympus Garments | </title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Barlow+Condensed:wght@300;400;500;700;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olympus Garments</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <header> 
-      <!-- NAV -->
-<nav>
-    <a class="nav-logo" href="index.html">OLYMPUS</a>
-    <ul class="nav-links">
-       <li><a href="preview.html">Preview</a></li>
-       <li><a href="shop.html">Shop</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <a href="cart.html"><button class="nav-cart">Cart</button></a>
-  </nav>
 
-  <!-- ═══════════ INTRO ═══════════ -->
-  <div class="intro-wrapper">
-    <div class="intro-bg">
-      <img src="images/Backg.jpg" alt="Olympus Garments background">
+<!-- HEADER / HERO -->
+<div class="header">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/OG LOGO.webp" alt="OG">
+                <span class="brand-name">Olympus Garments</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="intro.html">Intro</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                   
+                </ul>
+            </nav>
+            <a href="cart.html" class="cart-icon">
+                <img src="images/shopping-cart-svg-png-icon-download-28.png" alt="Cart">
+                <span class="cart-count" id="cartCount">0</span>
+            </a>
+        </div>
+
+        <div class="row" style="padding-bottom:60px;gap:40px;">
+            <div class="col-2">
+                <h1>WEAR THE CITY.<br>OWN THE NOISE.</h1>
+                <p>This isn't just clothing — it's a statement. Every piece we drop is designed for the ones who move with purpose, dress with intention, and never apologize for standing out. The streets shaped us. Now we're giving that back to you.</p>
+                <a href="products.html" class="btn">EXPLORE NOW &#8594;</a>
+            </div>
+            <div class="col-2" style="text-align:center;">
+                <img src="images/Background.jpg" alt="Olympus Garments" style="max-width:100%;max-height:680px;object-fit:cover;border-radius:8px;">
+            </div>
+        </div>
     </div>
+</div>
 
-    <div class="intro-overlay"></div>
-
-    <div class="intro-content">
-      <p class="intro-eyebrow">Olympus Garments — Est. 2024</p>
-      <h1 class="intro-title">OLY<span>MPUS</span></h1>
-      <p class="intro-sub">Garments</p>
-      <p class="intro-slogan">Raw Expression, Designed for the World</p>
-
-      <div class="intro-btns">
-        <a href="home.html">
-          <button class="btn btn-gold">Explore Collection</button>
-        </a>
-        <a href="about.html">
-          <button class="btn btn-outline">Our Story</button>
-        </a>
-        <a href="contact.html">
-          <button class="btn btn-outline">Contact</button>
-        </a>
-      </div>
+<!-- CATEGORIES -->
+<div class="categories">
+    <div class="container">
+        <div class="section-title light">
+            <h2>Shop by Category</h2>
+            <p>Street-tested. Culture-approved.</p>
+        </div>
+        <div class="row" style="gap:16px;padding-bottom:20px;">
+            <a href="products.html#hoodies" class="col-3" style="text-decoration:none;">
+                <img src="images/Hoodie1.jpg" alt="Hoodies">
+                <div class="cat-label">Hoodies</div>
+            </a>
+            <a href="products.html#pants" class="col-3" style="text-decoration:none;">
+                <img src="images/Pants1.jpg" alt="Pants">
+                <div class="cat-label">Pants</div>
+            </a>
+            <a href="products.html#shirts" class="col-3" style="text-decoration:none;">
+                <img src="images/Shirt1.jpg" alt="Shirts">
+                <div class="cat-label">Shirts</div>
+            </a>
+            <a href="products.html#jackets" class="col-3" style="text-decoration:none;">
+                <img src="images/Jacket1.jpg" alt="Jackets">
+                <div class="cat-label">Jackets</div>
+            </a>
+        </div>
     </div>
+</div>
 
-<div class="intro-nav">
-      <button class="intro-btn intro-btn-primary" onclick="showPage('home')">Explore Collection</button>
-      <button class="intro-btn intro-btn-secondary" onclick="showPage('about')">Our Story</button>
-      <button class="intro-btn intro-btn-secondary" onclick="showPage('contact')">Contact</button>
+<!-- FEATURED DROP BANNER -->
+<div style="background:#111;padding:80px 0;">
+    <div class="container">
+        <div class="row" style="gap:50px;">
+            <div class="col-2" style="text-align:center;">
+                <img src="images/Drop1.jpg" alt="Latest Drop" style="max-width:100%;max-height:600px;object-fit:cover;border-radius:8px;">
+            </div>
+            <div class="col-2">
+                <span style="display:block;font-size:11px;font-weight:800;letter-spacing:4px;text-transform:uppercase;color:#ffd6d6;margin-bottom:16px;">Latest Drop</span>
+                <h2 style="font-family:'Montserrat',sans-serif;font-size:44px;font-weight:900;letter-spacing:3px;text-transform:uppercase;color:#fff;line-height:1.15;margin-bottom:20px;">No Rules.<br>Just Fits.</h2>
+                <p style="color:#aaa;font-size:15px;line-height:28px;margin-bottom:30px;">The new drop just landed. Pulled straight from the intersection of art, culture, and the streets. Limited run. Once it's gone, it's gone.</p>
+                <a href="intro.html" class="btn">See the Drop</a>
+                <a href="products.html" class="btn-outline" style="margin-left:14px;color:#fff;border-color:#fff;">All Products</a>
+            </div>
+        </div>
     </div>
-  </div>
-  <div class="intro-scroll" onclick="showPage('home')">
-    <span>Explore</span>
-    <div class="scroll-line"></div>
-  </div>
-    
-    <div class="scroll-hint">
-      <span>Scroll</span>
-      <div class="scroll-line"></div>
+</div>
+
+<!-- FEATURED PRODUCTS -->
+<div style="background:#f4f4f4;padding:80px 0;">
+    <div class="container">
+        <div class="section-title">
+            <h2>Fresh Drops</h2>
+            <p>Limited run. Unlimited attitude.</p>
+        </div>
+        <div class="product-grid">
+
+            <div class="product-card">
+                <img src="images/Hoodie2.jpg" alt="Acid Wash Pullover">
+                <div class="product-info">
+                    <span class="tag tag-new">New</span>
+                    <h4>Acid Wash Pullover</h4>
+                    <p class="price">P 750</p>
+                    <button class="add-to-cart" onclick="addToCart('Acid Wash Pullover', 750)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/Pants4.jpg" alt="Embroidered Denim">
+                <div class="product-info">
+                    <span class="tag tag-limited">Limited</span>
+                    <h4>Embroidered Denim</h4>
+                    <p class="price">P 850</p>
+                    <button class="add-to-cart" onclick="addToCart('Embroidered Denim', 850)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/Jacket1.jpg" alt="Distressed Denim Jacket">
+                <div class="product-info">
+                    <span class="tag tag-limited">Limited</span>
+                    <h4>Distressed Denim Jacket</h4>
+                    <p class="price">P 1,100</p>
+                    <button class="add-to-cart" onclick="addToCart('Distressed Denim Jacket', 1100)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/Pants6.jpg" alt="Graphic Sweat Pants">
+                <div class="product-info">
+                    <span class="tag tag-new">New</span>
+                    <h4>Graphic Sweat Pants</h4>
+                    <p class="price">P 620</p>
+                    <button class="add-to-cart" onclick="addToCart('Graphic Sweat Pants', 620)">Add to Cart</button>
+                </div>
+            </div>
+
+        </div>
+        <div style="text-align:center;margin-top:40px;">
+            <a href="products.html" class="btn">View Full Collection</a>
+        </div>
     </div>
+</div>
 
-  </div><!-- /.intro-wrapper -->
+<!-- DROP PREVIEW -->
+<div style="background:#000;padding:80px 0;">
+    <div class="container">
+        <div class="section-title light">
+            <h2>Drops &amp; Exclusives</h2>
+            <p>Once they're gone, they're gone. No reruns. No apologies.</p>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:3px;margin-top:40px;">
+            <div style="position:relative;overflow:hidden;aspect-ratio:3/4;">
+                <img src="images/Drop1.jpg" alt="Drop 1" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.5s;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
+                <div style="position:absolute;bottom:0;left:0;right:0;padding:30px 24px;background:linear-gradient(transparent,rgba(0,0,0,0.9));color:#fff;">
+                    <span style="font-size:10px;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:#ffd6d6;display:block;margin-bottom:6px;">Drop 001</span>
+                    <p style="font-family:'Montserrat',sans-serif;font-size:18px;font-weight:900;letter-spacing:2px;text-transform:uppercase;">The Chaos Collection</p>
+                </div>
+            </div>
+            <div style="position:relative;overflow:hidden;aspect-ratio:3/4;">
+                <img src="images/Drop2.jpg" alt="Drop 2" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.5s;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
+                <div style="position:absolute;bottom:0;left:0;right:0;padding:30px 24px;background:linear-gradient(transparent,rgba(0,0,0,0.9));color:#fff;">
+                    <span style="font-size:10px;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:#ffd6d6;display:block;margin-bottom:6px;">Drop 002</span>
+                    <p style="font-family:'Montserrat',sans-serif;font-size:18px;font-weight:900;letter-spacing:2px;text-transform:uppercase;">Street Culture Vol. 2</p>
+                </div>
+            </div>
+            <div style="position:relative;overflow:hidden;aspect-ratio:3/4;">
+                <img src="images/Drop3.jpg" alt="Drop 3" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.5s;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
+                <div style="position:absolute;bottom:0;left:0;right:0;padding:30px 24px;background:linear-gradient(transparent,rgba(0,0,0,0.9));color:#fff;">
+                    <span style="font-size:10px;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:#ffd6d6;display:block;margin-bottom:6px;">Drop 003</span>
+                    <p style="font-family:'Montserrat',sans-serif;font-size:18px;font-weight:900;letter-spacing:2px;text-transform:uppercase;">From Ashes Rise</p>
+                </div>
+            </div>
+        </div>
+        <div style="text-align:center;margin-top:40px;">
+            <a href="intro.html" class="btn" style="background:#fff;color:#000;border-color:#fff;">View All Drops</a>
+        </div>
+    </div>
+</div>
 
+<!-- NEWSLETTER -->
+<div class="notify-section">
+    <div class="container">
+        <h2>Get the Drop Before the Crowd</h2>
+        <p>First access. No spam. Just heat.</p>
+        <div class="notify-form">
+            <input type="email" placeholder="your@email.com">
+            <button onclick="this.textContent='You\'re In ✓';this.style.background='#2a7a2a';">Notify Me</button>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Olympus Garments</h4>
+                <p>Built for the streets. Ready for whatever. No rules. Just fits.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="products.html">All Products</a></li>
+                    <li><a href="products.html#shirts">Shirts</a></li>
+                    <li><a href="products.html#pants">Pants</a></li>
+                    <li><a href="products.html#hoodies">Hoodies</a></li>
+                    <li><a href="products.html#jackets">Jackets</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Info</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="intro.html">Latest Drops</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>Gaborone, Botswana<br>info@olympusgarments.com<br>+267 XXX XXXX</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Olympus Garments. All rights reserved.</p>
+            <p>Wear the city. Own the noise.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    function updateCartCount() {
+        const cart = JSON.parse(localStorage.getItem('ogCart') || '[]');
+        document.getElementById('cartCount').textContent = cart.reduce((a,i)=>a+i.qty,0);
+    }
+    function addToCart(name, price) {
+        let cart = JSON.parse(localStorage.getItem('ogCart') || '[]');
+        const ex = cart.find(i=>i.name===name);
+        if(ex) ex.qty++; else cart.push({name,price,qty:1});
+        localStorage.setItem('ogCart', JSON.stringify(cart));
+        updateCartCount();
+        const btn = event.target;
+        btn.textContent='Added ✓'; btn.style.background='#2a7a2a';
+        setTimeout(()=>{btn.textContent='Add to Cart';btn.style.background='';},1500);
+    }
+    updateCartCount();
+</script>
 </body>
 </html>
