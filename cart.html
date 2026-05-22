@@ -1,40 +1,306 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Olympus Garments | </title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Barlow+Condensed:wght@300;400;500;700;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart — Olympus Garments</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+<body>
 
-  <div class="nav-links">
-            <a href="index.html">Intro</a>
-            <a href="preview.html">Preview</a>
-            <a href="shop.html">Shop</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-            <a href="cart.html" class="cart-link">🛒 Cart (<span id="cartCount">0</span>)</a>
+<!-- NAVBAR -->
+<div style="background:#f9f9f9;">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/OG LOGO.webp" alt="OG Logo">
+                <span class="brand-name">Olympus Garments</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="intro.html">Intro</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    
+                </ul>
+            </nav>
+            <a href="cart.html" class="cart-icon">
+                <img src="images/shopping-cart-svg-png-icon-download-28.png" alt="Cart">
+                <span class="cart-count" id="cartCount">0</span>
+            </a>
         </div>
-<!-- ==================== CART PAGE ==================== -->
-<div class="page" id="page-cart">
-  <div class="cart-layout" id="cart-layout">
-    <div class="cart-items-col">
-      <h2 class="cart-col-header">YOUR CART</h2>
-      <div id="cart-items-list"></div>
     </div>
-    <div class="cart-summary-col">
-      <div class="summary-title">ORDER SUMMARY</div>
-      <div class="summary-line"><span>Subtotal</span><span id="s-subtotal">P0</span></div>
-      <div class="summary-line"><span>Shipping</span><span id="s-shipping">Calculated at checkout</span></div>
-      <div class="summary-line"><span>VAT (14%)</span><span id="s-vat">P0</span></div>
-      <div class="summary-total"><span>Total</span><span class="amt" id="s-total">P0</span></div>
-      <button class="checkout-btn">Proceed to Checkout</button>
-      <button class="continue-btn" onclick="showPage('home')">Continue Shopping</button>
-    </div>
-  </div>
 </div>
 
+<!-- PAGE TITLE -->
+<div style="background:#f9f9f9;padding:40px 0 10px;">
+    <div class="container">
+        <h1 style="font-family:'Montserrat',sans-serif;font-size:32px;font-weight:900;letter-spacing:4px;text-transform:uppercase;">Your Cart</h1>
+    </div>
+</div>
 
+<!-- CART SECTION -->
+<div class="cart-section">
+    <div class="container">
+
+        <!-- EMPTY STATE -->
+        <div class="empty-cart" id="emptyCart" style="display:none;">
+            <h3>Your cart is empty</h3>
+            <p>Looks like you haven't added anything yet. The drop won't wait forever.</p>
+            <a href="products.html" class="btn">Shop the Collection</a>
+        </div>
+
+        <!-- CART CONTENT -->
+        <div class="cart-grid" id="cartContent">
+            <div class="cart-items">
+                <h2>Items <span id="itemCount" style="font-size:16px;color:#999;font-weight:400;">(0)</span></h2>
+                <div id="cartList"></div>
+
+                <div style="margin-top:30px;">
+                    <a href="products.html" class="btn-outline">← Continue Shopping</a>
+                </div>
+            </div>
+
+            <!-- ORDER SUMMARY -->
+            <div class="order-summary">
+                <h3>Order Summary</h3>
+
+                <div class="summary-line">
+                    <span>Subtotal</span>
+                    <span id="subtotal">P 0</span>
+                </div>
+                <div class="summary-line">
+                    <span>Shipping</span>
+                    <span id="shipping">P 0</span>
+                </div>
+                <div class="summary-line">
+                    <span>VAT (14%)</span>
+                    <span id="vat">P 0</span>
+                </div>
+
+                <div class="promo-input">
+                    <input type="text" placeholder="Promo code" id="promoInput">
+                    <button onclick="applyPromo()">Apply</button>
+                </div>
+
+                <div class="summary-line total">
+                    <span>Total</span>
+                    <span id="total">P 0</span>
+                </div>
+
+                <a href="checkout.html" class="checkout-btn" id="checkoutBtn">Proceed to Checkout</a>
+                <a href="products.html" class="continue-btn">Continue Shopping</a>
+
+                <div style="margin-top:20px;text-align:center;">
+                    <p style="font-size:11px;color:#bbb;letter-spacing:1px;">Secure checkout · Free returns on eligible items</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- YOU MIGHT ALSO LIKE -->
+<div style="background:#fff;padding:60px 0;">
+    <div class="container">
+        <div class="section-title">
+            <h2>You Might Also Like</h2>
+        </div>
+        <div class="product-grid" style="margin-top:20px;">
+            <div class="product-card">
+                <img src="images/Shirt2.jpg" alt="Chaos Graphic Tee">
+                <div class="product-info">
+                    <span class="tag tag-new">New</span>
+                    <h4>Chaos Graphic Tee</h4>
+                    <p class="price">P 380</p>
+                    <button class="add-to-cart" onclick="addToCart('Chaos Graphic Tee', 380)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="images/Hoodie2.jpg" alt="OG Signature Hoodie">
+                <div class="product-info">
+                    <span class="tag tag-limited">Limited</span>
+                    <h4>OG Signature Hoodie</h4>
+                    <p class="price">P 920</p>
+                    <button class="add-to-cart" onclick="addToCart('OG Signature Hoodie', 920)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="images/Pants4.jpg" alt="Wide Leg Cargo">
+                <div class="product-info">
+                    <h4>Wide Leg Cargo</h4>
+                    <p class="price">P 680</p>
+                    <button class="add-to-cart" onclick="addToCart('Wide Leg Cargo', 680)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="images/Sweater3.jpg" alt="OG Crewneck">
+                <div class="product-info">
+                    <span class="tag tag-limited">Limited</span>
+                    <h4>OG Crewneck</h4>
+                    <p class="price">P 620</p>
+                    <button class="add-to-cart" onclick="addToCart('OG Crewneck', 620)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Olympus Garments</h4>
+                <p>Built for the streets. Ready for whatever.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="products.html">All Products</a></li>
+                    <li><a href="products.html#shirts">Shirts</a></li>
+                    <li><a href="products.html#pants">Pants</a></li>
+                    <li><a href="products.html#hoodies">Hoodies</a></li>
+                    <li><a href="products.html#sweaters">Sweaters</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Info</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="intro.html">Latest Drops</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>Gaborone, Botswana<br>info@olympusgarments.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Olympus Garments. All rights reserved.</p>
+            <p>Wear the city. Own the noise.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    const SHIPPING = 80;
+    const VAT_RATE = 0.14;
+    let promoApplied = false;
+
+    function getCart() {
+        return JSON.parse(localStorage.getItem('ogCart') || '[]');
+    }
+
+    function saveCart(cart) {
+        localStorage.setItem('ogCart', JSON.stringify(cart));
+    }
+
+    function updateCartCount() {
+        const cart = getCart();
+        const count = cart.reduce((a, i) => a + i.qty, 0);
+        document.getElementById('cartCount').textContent = count;
+    }
+
+    function renderCart() {
+        const cart = getCart();
+        const cartList = document.getElementById('cartList');
+        const emptyCart = document.getElementById('emptyCart');
+        const cartContent = document.getElementById('cartContent');
+
+        if (cart.length === 0) {
+            emptyCart.style.display = 'block';
+            cartContent.style.display = 'none';
+            return;
+        }
+
+        emptyCart.style.display = 'none';
+        cartContent.style.display = 'grid';
+
+        document.getElementById('itemCount').textContent = `(${cart.reduce((a, i) => a + i.qty, 0)})`;
+
+        cartList.innerHTML = cart.map((item, idx) => `
+            <div class="cart-item">
+                <img src="images/Shirt2.jpg" alt="${item.name}">
+                <div class="cart-item-info">
+                    <h4>${item.name}</h4>
+                    <p class="item-meta">Size: M &nbsp;·&nbsp; Colour: Black</p>
+                    <div class="qty-control">
+                        <button class="qty-btn" onclick="changeQty(${idx}, -1)">−</button>
+                        <span class="qty-num">${item.qty}</span>
+                        <button class="qty-btn" onclick="changeQty(${idx}, 1)">+</button>
+                    </div>
+                    <button class="remove-btn" onclick="removeItem(${idx})">Remove</button>
+                </div>
+                <div class="cart-item-price">P ${(item.price * item.qty).toLocaleString()}</div>
+            </div>
+        `).join('');
+
+        updateTotals();
+        updateCartCount();
+    }
+
+    function updateTotals() {
+        const cart = getCart();
+        const subtotal = cart.reduce((a, i) => a + i.price * i.qty, 0);
+        const shipping = subtotal > 0 ? SHIPPING : 0;
+        const discount = promoApplied ? subtotal * 0.1 : 0;
+        const vat = (subtotal - discount) * VAT_RATE;
+        const total = subtotal - discount + shipping + vat;
+
+        document.getElementById('subtotal').textContent = `P ${subtotal.toLocaleString()}`;
+        document.getElementById('shipping').textContent = `P ${shipping}`;
+        document.getElementById('vat').textContent = `P ${Math.round(vat).toLocaleString()}`;
+        document.getElementById('total').textContent = `P ${Math.round(total).toLocaleString()}`;
+    }
+
+    function changeQty(idx, delta) {
+        let cart = getCart();
+        cart[idx].qty += delta;
+        if (cart[idx].qty <= 0) cart.splice(idx, 1);
+        saveCart(cart);
+        renderCart();
+    }
+
+    function removeItem(idx) {
+        let cart = getCart();
+        cart.splice(idx, 1);
+        saveCart(cart);
+        renderCart();
+    }
+
+    function addToCart(name, price) {
+        let cart = getCart();
+        const existing = cart.find(i => i.name === name);
+        if (existing) existing.qty++;
+        else cart.push({ name, price, qty: 1 });
+        saveCart(cart);
+        renderCart();
+
+        const btn = event.target;
+        btn.textContent = 'Added ✓';
+        btn.style.background = '#2a7a2a';
+        setTimeout(() => { btn.textContent = 'Add to Cart'; btn.style.background = ''; }, 1500);
+    }
+
+    function applyPromo() {
+        const code = document.getElementById('promoInput').value.trim().toUpperCase();
+        if (code === 'OG10' && !promoApplied) {
+            promoApplied = true;
+            document.getElementById('promoInput').value = 'OG10 — 10% off applied ✓';
+            document.getElementById('promoInput').disabled = true;
+            updateTotals();
+        } else if (promoApplied) {
+            alert('Promo already applied.');
+        } else {
+            alert('Invalid promo code. Try OG10 for 10% off.');
+        }
+    }
+
+    renderCart();
+</script>
+</body>
+</html>
