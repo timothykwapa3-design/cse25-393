@@ -2,167 +2,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About | Olympus Garments</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About — Olympus Garments</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
- <body>
-  <header>
-      <!-- NAV -->
-    <nav>
-    <div class="nav-container">
-        <div class="logo">
-            <a href="index.html" style="text-decoration: none;">
+<!-- NAVBAR -->
+<div style="background:#111;">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/OG LOGO.webp" alt="OG Logo">
+                <span class="brand-name" style="color:#fff;">Olympus Garments</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" style="color:#aaa;">Home</a></li>
+                    <li><a href="intro.html" style="color:#aaa;">Intro</a></li>
+                    <li><a href="products.html" style="color:#aaa;">Products</a></li>
+                    <li><a href="about.html" style="color:#fff;">About</a></li>
+                    <li><a href="contact.html" style="color:#aaa;">Contact</a></li>
+                   
+                </ul>
+            </nav>
+            <a href="cart.html" class="cart-icon">
+                <img src="images/shopping-cart-svg-png-icon-download-28.png" alt="Cart" style="filter:invert(1)">
+                <span class="cart-count" id="cartCount">0</span>
             </a>
         </div>
-        <div class="nav-links">
-            <a href="index.html">Intro</a>
-            <a href="preview.html">Preview</a>
-            <a href="shop.html">Shop</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-            <a href="cart.html" class="cart-link">🛒 Cart (<span id="cartCount">0</span>)</a>
-        </div>
     </div>
-</nav>
-  <button class="cart-btn" onclick="showPage('cart')">
-    Cart
-    <span class="cart-count" id="cart-count">0</span>
-  </button>
-  
-</nav>
-    </nav>
-  </header>
-
-<!-- ==================== ABOUT PAGE ==================== -->
-  <section class="about">
-<div class="page" id="page-about">
-  <div class="about-hero">
-    <div class="about-hero-bg"></div>
-    <h1 class="about-hero-title">OUR STORY</h1>
-  </div>
-
-  <div class="about-mission">
-    <p class="about-mission-quote">"Diversify culture by collaborating with local artists and producing ethically — empowering individuality through bold, limited-edition streetwear that bridges art and urban culture."</p>
-    <div class="about-mission-sub">— The Olympus Mission</div>
-  </div>
-
-  <div class="about-grid">
-    <div class="about-cell">
-      <div class="about-cell-label">Who We Are</div>
-      <h3 class="about-cell-title">Born from the Roots</h3>
-      <p class="about-cell-text">Olympus Garments was born from the belief that fashion is a language — and everyone deserves a voice. We source inspiration from underground art, global street culture, and local craftspeople, channeling their energy into limited-edition drops that mean something.</p>
-    </div>
-    <div class="about-cell">
-      <div class="about-cell-label">What We Do</div>
-      <h3 class="about-cell-title">Art Meets Urban Culture</h3>
-      <p class="about-cell-text">Every Olympus piece is a collaboration — between designer and artist, tradition and rebellion, the local and the global. We don't follow the masses. We document culture, stitch it into fabric, and put it on the streets.</p>
-    </div>
-    <div class="about-cell">
-      <div class="about-cell-label">Our Approach</div>
-      <h3 class="about-cell-title">Ethical by Design</h3>
-      <p class="about-cell-text">We are committed to a circular economy. Every garment is produced ethically, using recycled fabrics where possible, and shipped in zero-waste packaging. Sustainability isn't a feature — it's our foundation.</p>
-    </div>
-    <div class="about-cell">
-      <div class="about-cell-label">Our Reach</div>
-      <h3 class="about-cell-title">Local Craft, Global Scale</h3>
-      <p class="about-cell-text">We partner with designers and artists from across the globe, elevating local craftsmanship to an international level. From embroidery houses to independent graphic artists, every collaborator is credited.</p>
-    </div>
-  </div>
-
-  <div class="values-list">
-    <div class="value-item">
-      <div class="value-num">01</div>
-      <div class="value-title">Sustainability</div>
-      <p class="value-text">Recycled fabrics, zero-waste packaging, and a commitment to circular fashion at every step of our supply chain.</p>
-    </div>
-    <div class="value-item">
-      <div class="value-num">02</div>
-      <div class="value-title">Individuality</div>
-      <p class="value-text">We celebrate what makes each person distinct. Our drops empower you to dress on your own terms.</p>
-    </div>
-    <div class="value-item">
-      <div class="value-num">03</div>
-      <div class="value-title">Community</div>
-      <p class="value-text">Our customers vote on next drops, shape campaigns, and co-create culture. The Olympus community is the brand.</p>
-    </div>
-    <div class="value-item">
-      <div class="value-num">04</div>
-      <div class="value-title">Craftsmanship</div>
-      <p class="value-text">From 470gsm heavyweight fabric to hand-embroidered detailing — every garment is engineered to outlast trends.</p>
-    </div>
-    <div class="value-item">
-      <div class="value-num">05</div>
-      <div class="value-title">Transparency</div>
-      <p class="value-text">We publish our supply chain partners, material sourcing, and production methods. You know exactly what you're wearing and where it came from.</p>
-    </div>
-  </div>
-
-  <div class="faq-section">
-    <h2 class="faq-title">FAQ</h2>
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">What sizes does Olympus offer?</div>
-      <div class="faq-a">We offer XS through 3XL across all garment categories. Size guides are available on each product page. Olympus cuts tend to run oversized — we recommend sizing down if you prefer a more fitted silhouette.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">Are your drops truly limited edition?</div>
-      <div class="faq-a">Yes. Every Olympus collection is produced in a limited run. Once a piece sells out, it does not restock. This ensures that every garment remains rare, meaningful, and exclusive to those who move fast.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">Do you ship internationally?</div>
-      <div class="faq-a">We ship globally to over 80 countries. Standard shipping takes 7–14 business days internationally. Express options are available at checkout. All orders are shipped in our signature zero-waste packaging.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">How do I care for my Olympus garment?</div>
-      <div class="faq-a">Cold wash, inside out, on a gentle cycle. Hang dry or tumble dry on low. Do not iron directly on printed or embroidered areas. Following these steps will preserve the integrity of your piece for years.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">Can I collaborate or submit artwork?</div>
-      <div class="faq-a">Absolutely. Olympus is always seeking new creative voices. Send your portfolio and a short proposal to our contact page. We review all submissions and will respond within 14 days.</div>
-    </div>
-  </div>
 </div>
 
+<!-- HERO -->
+<div class="about-hero">
+    <div class="container">
+        <h1>We Don't Follow<br>Trends. We<br>Outlast Them.</h1>
+        <p>Olympus Garments was built in Gaborone with one obsession — creating pieces that mean something long after the hype dies down.</p>
+    </div>
+</div>
 
-    <!-- ==================== FOOTER ==================== -->
-  <footer>
-    <div>
-    <div class="footer-brand">OLYMPUS</div>
-  </div>
-  <div>
-    <div class="footer-col-title">Navigate</div>
-    <ul class="footer-col-links">
-      <li><a onclick="showPage('intro')">Introduction</a></li>
-      <li><a onclick="showPage('home')">Collection</a></li>
-      <li><a onclick="showPage('about')">About</a></li>
-      <li><a onclick="showPage('contact')">Contact</a></li>
-    </ul>
-  </div>
-  <div>
-    <div class="footer-col-title">Information</div>
-    <ul class="footer-col-links">
-      <li><a href="#">Shipping Policy</a></li>
-      <li><a href="#">Returns & Exchanges</a></li>
-      <li><a href="#">Size Guide</a></li>
-      <li><a href="#">Product Care</a></li>
-    </ul>
-  </div>
-  <div>
-    <div class="footer-col-title">Community</div>
-    <ul class="footer-col-links">
-      <li><a href="#">Instagram</a></li>
-      <li><a href="#">Artist Collabs</a></li>
-      <li><a href="#">Drop Alerts</a></li>
-      <li><a href="#">Sustainability</a></li>
-    </ul>
-  </div>
+<!-- STORY BLOCKS -->
+<div class="about-blocks">
+    <div class="about-block">
+        <h3>Where It Started</h3>
+        <p>We started with nothing but a vision and a deep respect for street culture. No corporate backing, no focus groups — just a relentless obsession with quality, authenticity, and the kind of style that can't be manufactured. Every stitch, every drop, every colourway is a reflection of the world outside your window.</p>
+    </div>
+    <div class="about-block">
+        <h3>What We Build For</h3>
+        <p>We build for the ones who move with purpose. The ones who dress with intention and never apologize for standing out. Mass production killed the vibe — that's why we keep our runs tight and our standards higher. If it doesn't hit right, it doesn't ship.</p>
+    </div>
+    <div class="about-block">
+        <h3>The Culture</h3>
+        <p>Streetwear has always been about more than clothes. It's about who you are when no one's watching, the neighbourhoods that raised you, and the movements that shaped you. We're not just selling fits — we're building a community of people who show up fully, every single day.</p>
+    </div>
+    <div class="about-block">
+        <h3>How We Make It</h3>
+        <p>We make less on purpose. Every piece is designed to last beyond a season, because the best street style isn't disposable — it's inherited. We source responsibly, produce intentionally, and stand behind everything we put our name on. No shortcuts. No excuses.</p>
+    </div>
+</div>
+
+<!-- VALUES -->
+<div class="values-section">
+    <div class="container">
+        <div class="section-title light">
+            <h2>What We Stand On</h2>
+        </div>
+        <div class="values-grid">
+            <div class="value-item">
+                <span class="value-num">01</span>
+                <h4>Authenticity</h4>
+                <p>Every piece we make is a genuine expression of street culture — never trend-chasing, always intentional.</p>
+            </div>
+            <div class="value-item">
+                <span class="value-num">02</span>
+                <h4>Quality First</h4>
+                <p>Tight runs, high standards. If it doesn't pass our check, it doesn't go out. Simple as that.</p>
+            </div>
+            <div class="value-item">
+                <span class="value-num">03</span>
+                <h4>Community</h4>
+                <p>We exist because of the culture. Every drop is a thank you to the people who built the streets we love.</p>
+            </div>
+            <div class="value-item">
+                <span class="value-num">04</span>
+                <h4>Longevity</h4>
+                <p>We build things that last. Not for the season. For the years. Style that outlives the trend cycle.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CTA -->
+<div style="background:#f4f4f4; padding:80px 0; text-align:center;">
+    <div class="container">
+        <h2 style="font-family:'Montserrat',sans-serif;font-size:36px;font-weight:900;letter-spacing:4px;text-transform:uppercase;margin-bottom:16px;">Ready to Cop?</h2>
+        <p style="color:#666;font-size:15px;margin-bottom:30px;">Browse the full collection. Limited runs don't wait.</p>
+        <a href="products.html" class="btn">Shop the Drop</a>
+        <a href="contact.html" class="btn-outline" style="margin-left:16px;">Get in Touch</a>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Olympus Garments</h4>
+                <p>Built for the streets. Ready for whatever. No rules. Just fits.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="products.html">All Products</a></li>
+                    <li><a href="products.html#shirts">Shirts</a></li>
+                    <li><a href="products.html#pants">Pants</a></li>
+                    <li><a href="products.html#hoodies">Hoodies</a></li>
+                    <li><a href="products.html#sweaters">Sweaters</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Info</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="intro.html">Latest Drops</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>Gaborone, Botswana<br>info@olympusgarments.com<br>+267 XXX XXXX</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Olympus Garments. All rights reserved.</p>
+            <p>Wear the city. Own the noise.</p>
+        </div>
+    </div>
 </footer>
-<div class="footer-copy">
-  <span>© 2025 Olympus Garments. All rights reserved.</span>
 
-  </footer>
+<script>
+    function updateCartCount() {
+        const cart = JSON.parse(localStorage.getItem('ogCart') || '[]');
+        document.getElementById('cartCount').textContent = cart.reduce((a, i) => a + i.qty, 0);
+    }
+    updateCartCount();
+</script>
 </body>
 </html>
