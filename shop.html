@@ -2,155 +2,274 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Olympus Garments | </title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Barlow+Condensed:wght@300;400;500;700;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products — Olympus Garments</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-  
 <body>
-  <header>
-    
-      <!-- NAV -->
-    <nav>
-    <div class="nav-container">
-        <div class="logo">
-            <a href="index.html" style="text-decoration: none;">
+
+<div style="background:#f4f4f4;">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/OG LOGO.webp" alt="OG">
+                <span class="brand-name">Olympus Garments</span>
+            </div>
+            <nav><ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="intro.html">Intro</a></li>
+                <li><a href="shop.html">shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+               
+            </ul></nav>
+            <a href="cart.html" class="cart-icon">
+                <img src="images/shopping-cart-svg-png-icon-download-28.png" alt="Cart">
+                <span class="cart-count" id="cartCount">0</span>
             </a>
         </div>
-        <div class="nav-links">
-            <a href="index.html">Intro</a>
-            <a href="preview.html">Preview</a>
-            <a href="shop.html">Shop</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-            <a href="cart.html" class="cart-link">🛒 Cart (<span id="cartCount">0</span>)</a>
-        </div>
     </div>
-</nav>
-  <button class="cart-btn" onclick="showPage('cart')">
-    Cart
-    <span class="cart-count" id="cart-count">0</span>
-  </button>
-  
-</nav>
-    </nav>
-  </header>
-
-  <!-- ==================== HOME PAGE ==================== -->
-<div class="page" id="page-home">
-  <div class="hero">
-    <div class="hero-tape">Limited Drop — SS2025 Collection</div>
-    <div class="hero-bg-grid"></div>
-    <div class="hero-content">
-      <div class="hero-tag">New Collection</div>
-      <h1 class="hero-title">DISCOVER<br>YOUR <span class="accent">VIBE</span></h1>
-      <p class="hero-desc">Diversifying culture through sustainable fashion.</p>
-      <button class="btn-gold" onclick="document.getElementById('collection').scrollIntoView({behavior:'smooth'})">View Collection</button>
-    </div>
-  </div>
-
-<!-- ═══════════ CATEGORY FILTER ═══════════ -->
-  <div class="cat-strip">
-    <button class="cat-btn active" onclick="filter('All',this)">All</button>
-    <button class="cat-btn" onclick="filter('Winter wear',this)">Winter wear</button>
-    <button class="cat-btn" onclick="filter('Sweatshirt',this)">Winter wear</button>
-    <button class="cat-btn" onclick="filter('Sweater',this)">Winter wear</button>
-    <button class="cat-btn" onclick="filter('Jacket',this)">Winter wear</button>
-    <button class="cat-btn" onclick="filter('Jeans',this)">Bottoms</button>
-    <button class="cat-btn" onclick="filter('Shirt',this)">Tops</button>
-    <button class="cat-btn" onclick="filter('T-Shirt',this)">Tops</button>
-  </div>
-
-  <section>
-  <section class="collections">
-    <h2>Explore Our Collections</h2>
-    <div class="grid">
-      <div class="card"><img src="images/Tshirt1.jpg" alt="T-shirt"><p>T-Shirts</p></div>
-      <div class="card"><img src="images/Sweater2.jpg" alt="Sweater"><p>Sweaters</p></div>
-      <div class="card"><img src="images/Hoodie1.jpg" alt="Hoodie"><p>Hoodie</p></div>
-      <div class="card"><img src="images/Shirt1.jpg" alt="Shirts"><p>Shirts</p></div>
-      <div class="card"><img src="images/Jacket1.jpg" alt="Jackets"><p>Jackets</p></div>
-      <div class="card"><img src="images/Pants1.jpg" alt="Pants"><p>Pants</p></div>
-    </div>
-  </section>
-
-  <div class="section-header" id="collection">
-    <h2 class="section-title">THE COLLECTION</h2>
-    <span class="section-count" id="collection-count">PIECES</span>
-  </div>
-
-  <div class="collection-grid" id="collection-grid"></div>
-
-  <!-- QUALITY SECTION -->
-  <div class="quality-section">
-    <div>
-      <div class="quality-heading">470gsm</div>
-      <p class="quality-body">
-        Our signature fabric weight defines the Olympus standard. 470gsm is a heavyweight construction renowned for its premium hand-feel, and lasting durability. Built for the streets, made to endure. The density ensures every piece retains its structure through years of wear, making it the ideal choice for those who demand both luxury and longevity.
-      </p>
-      <p class="quality-body" style="margin-bottom:0">
-        Opting for Quality fabric is a commitment to a more luxurious feel and appearance — a garment that commands presence. Select pieces in our range feature this standard, denoted clearly on each product card.
-      </p>
-      <div class="quality-points">
-        <div class="quality-point">
-          <div class="quality-point-label">Fabric Weight</div>
-          <div class="quality-point-val">470gsm Heavyweight</div>
-        </div>
-        <div class="quality-point">
-          <div class="quality-point-label">Durability</div>
-        </div>
-        <div class="quality-point">
-          <div class="quality-point-label">Ethics</div>
-          <div class="quality-point-val">Locally Sourced</div>
-        </div>
-        <div class="quality-point">
-          <div class="quality-point-label">Packaging</div>
-          <div class="quality-point-val">Zero Waste</div>
-        </div>
-      </div>
-    </div>
-    <img id="quality-img" alt="Quality 470gsm fabric">
-  </div>
 </div>
-  
-  <!-- ==================== FOOTER ==================== -->
-  <footer>
-    <div>
-    <div class="footer-brand">OLYMPUS</div>
-  </div>
-  <div>
-    <div class="footer-col-title">Navigate</div>
-    <ul class="footer-col-links">
-      <li><a onclick="showPage('intro')">Introduction</a></li>
-      <li><a onclick="showPage('home')">Collection</a></li>
-      <li><a onclick="showPage('about')">About</a></li>
-      <li><a onclick="showPage('contact')">Contact</a></li>
-    </ul>
-  </div>
-  <div>
-    <div class="footer-col-title">Information</div>
-    <ul class="footer-col-links">
-      <li><a href="#">Shipping Policy</a></li>
-      <li><a href="#">Returns & Exchanges</a></li>
-      <li><a href="#">Size Guide</a></li>
-      <li><a href="#">Product Care</a></li>
-    </ul>
-  </div>
-  <div>
-    <div class="footer-col-title">Community</div>
-    <ul class="footer-col-links">
-      <li><a href="#">Instagram</a></li>
-      <li><a href="#">Artist Collabs</a></li>
-      <li><a href="#">Drop Alerts</a></li>
-      <li><a href="#">Sustainability</a></li>
-    </ul>
-  </div>
+
+<div class="page-hero">
+    <h1>The Collection</h1>
+    <p>Drop. Wear. Repeat.</p>
+</div>
+
+<div class="products-section">
+    <div class="container">
+
+        <div class="filter-bar">
+            <button class="filter-btn active" onclick="filterProducts('all',this)">All</button>
+            <button class="filter-btn" onclick="filterProducts('shirts',this)">Shirts</button>
+            <button class="filter-btn" onclick="filterProducts('pants',this)">Pants</button>
+            <button class="filter-btn" onclick="filterProducts('hoodies',this)">Hoodies</button>
+            <button class="filter-btn" onclick="filterProducts('jackets',this)">Jackets</button>
+        </div>
+
+        <!-- SHIRTS -->
+        <div class="category-group" id="shirts">
+            <div class="section-title" style="text-align:left;padding:30px 0 20px;">
+                <h2 style="font-size:24px;">Shirts</h2>
+            </div>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="images/Tshirt2.jpg" alt="OG Heavyweight Tee" style="height:380px;object-fit:cover;">
+                    <div class="product-info">
+                        <span class="tag tag-new">New</span>
+                        <h4>OG Heavyweight Tee — Black</h4>
+                        <p class="price">P 380</p>
+                        <button class="add-to-cart" onclick="addToCart('OG Heavyweight Tee — Black',380)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/Shirt1.jpg" alt="Oversized Street Tee" style="height:380px;object-fit:cover;">
+                    <div class="product-info">
+                        <span class="tag tag-new">New</span>
+                        <h4>Oversized Street Tee — White</h4>
+                        <p class="price">P 320</p>
+                        <button class="add-to-cart" onclick="addToCart('Oversized Street Tee — White',320)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/Tshirt1.jpg" alt="Drop Shoulder Tee" style="height:380px;object-fit:cover;">
+                    <div class="product-info">
+                        <span class="tag tag-sale">Sale</span>
+                        <h4>Drop Shoulder Tee — White</h4>
+                        <p class="price">P 240 <span style="color:#999;text-decoration:line-through;font-size:13px;">P 320</span></p>
+                        <button class="add-to-cart" onclick="addToCart('Drop Shoulder Tee — White',240)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/Tshirt3.jpg" alt="Back Print Tee" style="height:380px;object-fit:cover;">
+                    <div class="product-info">
+                        <h4>Back-Print Tee — Cream</h4>
+                        <p class="price">P 350</p>
+                        <button class="add-to-cart" onclick="addToCart('Back-Print Tee — Cream',350)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PANTS -->
+        <div class="category-group" id="pants">
+            <div class="section-title" style="text-align:left;padding:30px 0 20px;">
+                <h2 style="font-size:24px;">Pants</h2>
+            </div>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="images/Pants1.jpg" alt="Veiled Statue Denim" style="height:380px;object-fit:cover;">
+                    <div class="product-info">
+                        <span class="tag tag-limited">Limited</span>
+                        <h4>Veiled Statue Denim</h4>
+                        <p class="price">P 920</p>
+                        <button class="add-to-cart" onclick="addToCart('Veiled Statue Denim',920)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/Pants2.jpg" alt="Balloon Sweat Pants" style="height:380px;object-fit:cover;">
+                    <div class="product-info">
+                        <span class="tag tag-new">New</span>
+                        <h4>Balloon Sweat Pants — Grey</h4>
+                        <p class="price">P 580</p>
+                        <button class="add-to-cart" onclick="addToCart('Balloon Sweat Pants — Grey',580)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/Pants3.jpg" alt="Angel Embroidered Denim" style="height:380px;object-fit:cover;">
+                    <div class="product-info">
+                        <span class="tag tag-limited">Limited</span>
+                        <h4>Angel Embroidered Denim</h4>
+                        <p class="price">P 1,100</p>
+                        <button class="add-to-cart" onclick="addToCart('Angel Embroidered Denim',1100)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/Pants4.jpg" alt="Knight Embroidered Denim" style="height:380px;object-fit:cover;">
+                    <div class="product-info">
+                        <span class="tag tag-limited">Limited</span>
+                        <h4>Knight Embroidered Denim</h4>
+                        <p class="price">P 980</p>
+                        <button class="add-to-cart" onclick="addToCart('Knight Embroidered Denim',980)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/Pants5.jpg" alt="Piped Wide Leg Sweats" style="height:380px;object-fit:cover;">
+                    <div class="product-info">
+                        <span class="tag tag-new">New</span>
+                        <h4>Piped Wide Leg Sweats</h4>
+                        <p class="price">P 640</p>
+                        <button class="add-to-cart" onclick="addToCart('Piped Wide Leg Sweats',640)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/Pants6.jpg" alt="Script Graphic Sweats" style="height:380px;object-fit:cover;">
+                    <div class="product-info">
+                        <span class="tag tag-new">New</span>
+                        <h4>Script Graphic Sweats — Black</h4>
+                        <p class="price">P 620</p>
+                        <button class="add-to-cart" onclick="addToCart('Script Graphic Sweats — Black',620)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- HOODIES -->
+        <div class="category-group" id="hoodies">
+            <div class="section-title" style="text-align:left;padding:30px 0 20px;">
+                <h2 style="font-size:24px;">Hoodies</h2>
+            </div>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="images/Hoodie1.jpg" alt="OG Boxy Hoodie" style="height:380px;object-fit:cover;">
+                    <div class="product-info">
+                        <span class="tag tag-new">New</span>
+                        <h4>OG Boxy Hoodie — Black</h4>
+                        <p class="price">P 850</p>
+                        <button class="add-to-cart" onclick="addToCart('OG Boxy Hoodie — Black',850)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/Hoodie2.jpg" alt="Falconer Zip Hoodie" style="height:380px;object-fit:cover;">
+                    <div class="product-info">
+                        <span class="tag tag-limited">Limited</span>
+                        <h4>Falconer Zip Hoodie</h4>
+                        <p class="price">P 1,200</p>
+                        <button class="add-to-cart" onclick="addToCart('Falconer Zip Hoodie',1200)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/Hoodie3.jpg" alt="Raspberry Washed Hoodie" style="height:380px;object-fit:cover;">
+                    <div class="product-info">
+                        <span class="tag tag-limited">Limited</span>
+                        <h4>Washed Graphic Hoodie</h4>
+                        <p class="price">P 950</p>
+                        <button class="add-to-cart" onclick="addToCart('Washed Graphic Hoodie',950)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- JACKETS -->
+        <div class="category-group" id="jackets">
+            <div class="section-title" style="text-align:left;padding:30px 0 20px;">
+                <h2 style="font-size:24px;">Jackets</h2>
+            </div>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="images/Jacket1.jpg" alt="Saint Michael Denim Jacket" style="height:380px;object-fit:cover;">
+                    <div class="product-info">
+                        <span class="tag tag-limited">Limited</span>
+                        <h4>Saint Michael Denim Jacket</h4>
+                        <p class="price">P 1,400</p>
+                        <button class="add-to-cart" onclick="addToCart('Saint Michael Denim Jacket',1400)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/Jacket2.jpg" alt="Doberman Corduroy Jacket" style="height:380px;object-fit:cover;">
+                    <div class="product-info">
+                        <span class="tag tag-new">New</span>
+                        <h4>Doberman Corduroy Jacket</h4>
+                        <p class="price">P 1,150</p>
+                        <button class="add-to-cart" onclick="addToCart('Doberman Corduroy Jacket',1150)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col"><h4>Olympus Garments</h4><p>Built for the streets. Ready for whatever.</p></div>
+            <div class="footer-col"><h4>Shop</h4><ul>
+                <li><a href="products.html">All Products</a></li>
+                <li><a href="products.html#shirts">Shirts</a></li>
+                <li><a href="products.html#pants">Pants</a></li>
+                <li><a href="products.html#hoodies">Hoodies</a></li>
+                <li><a href="products.html#jackets">Jackets</a></li>
+            </ul></div>
+            <div class="footer-col"><h4>Info</h4><ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="intro.html">Latest Drops</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul></div>
+            <div class="footer-col"><h4>Contact</h4><p>Gaborone, Botswana<br>info@olympusgarments.com</p></div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Olympus Garments. All rights reserved.</p>
+            <p>Wear the city. Own the noise.</p>
+        </div>
+    </div>
 </footer>
-<div class="footer-copy">
-  <span>© 2025 Olympus Garments. All rights reserved.</span>
-  </footer>
+
+<script>
+    function updateCartCount() {
+        const cart = JSON.parse(localStorage.getItem('ogCart')||'[]');
+        document.getElementById('cartCount').textContent = cart.reduce((a,i)=>a+i.qty,0);
+    }
+    function addToCart(name,price) {
+        let cart = JSON.parse(localStorage.getItem('ogCart')||'[]');
+        const ex = cart.find(i=>i.name===name);
+        if(ex) ex.qty++; else cart.push({name,price,qty:1});
+        localStorage.setItem('ogCart',JSON.stringify(cart));
+        updateCartCount();
+        const btn=event.target;
+        btn.textContent='Added ✓';btn.style.background='#2a7a2a';
+        setTimeout(()=>{btn.textContent='Add to Cart';btn.style.background='';},1500);
+    }
+    function filterProducts(cat,btn) {
+        document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+        btn.classList.add('active');
+        document.querySelectorAll('.category-group').forEach(g=>{
+            g.style.display=(cat==='all'||g.id===cat)?'block':'none';
+        });
+    }
+    updateCartCount();
+</script>
 </body>
 </html>
