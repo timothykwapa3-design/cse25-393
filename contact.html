@@ -1,126 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | Olympus Garments</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — Olympus Garments</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>  
-      <!-- NAV -->
-    <nav>
-    <div class="nav-container">
-        <div class="logo">
-            <a href="index.html" style="text-decoration: none;">
+
+<!-- NAVBAR -->
+<div style="background:radial-gradient(#fff,#ffd6d6);">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/OG LOGO.webp" alt="OG Logo">
+                <span class="brand-name">Olympus Garments</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="intro.html">Intro</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                   
+                </ul>
+            </nav>
+            <a href="cart.html" class="cart-icon">
+                <img src="images/shopping-cart-svg-png-icon-download-28.png" alt="Cart">
+                <span class="cart-count" id="cartCount">0</span>
             </a>
         </div>
-        <div class="nav-links">
-            <a href="index.html">Intro</a>
-            <a href="preview.html">Preview</a>
-            <a href="shop.html">Shop</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-            <a href="cart.html" class="cart-link">🛒 Cart (<span id="cartCount">0</span>)</a>
-        </div>
     </div>
-</nav>
-  <button class="cart-btn" onclick="showPage('cart')">
-    Cart
-    <span class="cart-count" id="cart-count">0</span>
-  </button>
-  
-  <div class="faq-section">
-    <h2 class="faq-title">FAQ</h2>
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">What sizes does Olympus offer?</div>
-      <div class="faq-a">We offer XS through 3XL across all garment categories. Size guides are available on each product page. Olympus cuts tend to run oversized — we recommend sizing down if you prefer a more fitted silhouette.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">Are your drops truly limited edition?</div>
-      <div class="faq-a">Yes. Every Olympus collection is produced in a limited run. Once a piece sells out, it does not restock. This ensures that every garment remains rare, meaningful, and exclusive to those who move fast.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">Do you ship internationally?</div>
-      <div class="faq-a">We ship globally to over 80 countries. Standard shipping takes 7–14 business days internationally. Express options are available at checkout. All orders are shipped in our signature zero-waste packaging.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">How do I care for my Olympus garment?</div>
-      <div class="faq-a">Cold wash, inside out, on a gentle cycle. Hang dry or tumble dry on low. Do not iron directly on printed or embroidered areas. Following these steps will preserve the integrity of your piece for years.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">Can I collaborate or submit artwork?</div>
-      <div class="faq-a">Absolutely. Olympus is always seeking new creative voices. Send your portfolio and a short proposal to our contact page. We review all submissions and will respond within 14 days.</div>
-    </div>
-  </div>
 </div>
 
-<!-- ==================== CONTACT PAGE ==================== -->
-<div class="page" id="page-contact">
-  <div class="contact-layout">
-    <div class="contact-left">
-      <div class="contact-eyebrow">Get in Touch</div>
-      <h2 class="contact-heading">LET'S<br>TALK</h2>
-      <p class="contact-desc">Whether you want to place a wholesale enquiry, collaborate as an artist, or simply leave us feedback — we want to hear from you. Your voice shapes Olympus.</p>
-      <div class="contact-info-list">
-        <div class="contact-info-item">
-          <span class="contact-info-label">Email</span>
-          <span class="contact-info-value">hello@olympusgarments.com</span>
-        </div>
-        <div class="contact-info-item">
-          <span class="contact-info-label">Instagram</span>
-          <span class="contact-info-value">@olympus.garments</span>
-        </div>
-        <div class="contact-info-item">
-          <span class="contact-info-label">Location</span>
-          <span class="contact-info-value">Global — Est. Gaborone, BW</span>
-        </div>
-        <div class="contact-info-item">
-          <span class="contact-info-label">Response Time</span>
-          <span class="contact-info-value">Within 48 Hours</span>
-        </div>
-      </div>
+<!-- CONTACT HERO -->
+<div class="contact-hero">
+    <div class="container">
+        <h1>Get in Touch</h1>
+        <p>Questions about an order, a collab, or just want to talk fits? We're here. Real people, real responses.</p>
     </div>
-    <div class="contact-right">
-      <div class="form-group">
-        <label class="form-label">Full Name</label>
-        <input class="form-input" type="text" placeholder="Your name" id="c-name">
-      </div>
-      <div class="form-group">
-        <label class="form-label">Email Address</label>
-        <input class="form-input" type="email" placeholder="your@email.com" id="c-email">
-      </div>
-      <div class="form-group">
-        <label class="form-label">Subject</label>
-        <select class="form-select" id="c-subject">
-          <option value="">Select a subject</option>
-          <option>Product Enquiry</option>
-          <option>Artist Collaboration</option>
-          <option>Wholesale / Retail</option>
-          <option>Shipping & Returns</option>
-          <option>General Feedback</option>
-          <option>Press & Media</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label class="form-label">Message</label>
-        <textarea class="form-textarea" placeholder="Tell us what's on your mind..." id="c-msg"></textarea>
-      </div>
-      <div class="form-group" style="margin-bottom:0">
-        <label class="form-label">Rating (Optional)</label>
-        <div style="display:flex;gap:8px;margin-top:4px" id="star-row">
-          <span class="star" data-v="1" onclick="setRating(1)" style="font-size:24px;cursor:pointer;color:#444;transition:color 0.2s">★</span>
-          <span class="star" data-v="2" onclick="setRating(2)" style="font-size:24px;cursor:pointer;color:#444;transition:color 0.2s">★</span>
-          <span class="star" data-v="3" onclick="setRating(3)" style="font-size:24px;cursor:pointer;color:#444;transition:color 0.2s">★</span>
-          <span class="star" data-v="4" onclick="setRating(4)" style="font-size:24px;cursor:pointer;color:#444;transition:color 0.2s">★</span>
-          <span class="star" data-v="5" onclick="setRating(5)" style="font-size:24px;cursor:pointer;color:#444;transition:color 0.2s">★</span>
-        </div>
-      </div>
-      <button class="form-submit" onclick="submitForm()">Send Message</button>
-      <div class="success-msg" id="success-msg">✓ Message sent. We'll be in touch within 48 hours.</div>
-    </div>
-  </div>
 </div>
-  
-  </body>
+
+<!-- CONTACT SECTION -->
+<div class="contact-section">
+    <div class="container">
+        <div class="contact-grid">
+
+            <!-- LEFT: INFO -->
+            <div class="contact-info">
+                <h3>Reach Us</h3>
+
+                <div class="contact-detail">
+                    <span>Location</span>
+                    <p>Gaborone, Botswana</p>
+                </div>
+                <div class="contact-detail">
+                    <span>Email</span>
+                    <p>info@olympusgarments.com</p>
+                </div>
+                <div class="contact-detail">
+                    <span>Phone</span>
+                    <p>+267 XXX XXXX</p>
+                </div>
+                <div class="contact-detail">
+                    <span>Hours</span>
+                    <p>Mon – Fri: 9am – 6pm<br>Sat: 10am – 4pm</p>
+                </div>
+                <div class="contact-detail">
+                    <span>Socials</span>
+                    <p>@olympusgarments</p>
+                </div>
+
+                <div style="margin-top:50px;padding:30px;background:#0d0d0d;border-radius:10px;color:#fff;">
+                    <p style="font-family:'Montserrat',sans-serif;font-size:13px;font-weight:800;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px;color:#ffd6d6;">Order Enquiries</p>
+                    <p style="font-size:14px;color:#aaa;line-height:24px;">For issues with an existing order, include your order number and we'll sort it within 24 hours. No hassle, no runaround.</p>
+                </div>
+            </div>
+
+            <!-- RIGHT: FORM -->
+            <div>
+                <div class="contact-form">
+                    <div class="form-row">
+                        <div>
+                            <label>First Name</label>
+                            <input type="text" placeholder="Kabo">
+                        </div>
+                        <div>
+                            <label>Last Name</label>
+                            <input type="text" placeholder="Motlhabane">
+                        </div>
+                    </div>
+
+                    <label>Email</label>
+                    <input type="email" placeholder="you@email.com">
+
+                    <label>Phone (optional)</label>
+                    <input type="tel" placeholder="+267 XXX XXXX">
+
+                    <label>Subject</label>
+                    <select>
+                        <option value="">Select a topic...</option>
+                        <option>Order Enquiry</option>
+                        <option>Returns & Exchanges</option>
+                        <option>Collaboration</option>
+                        <option>Wholesale</option>
+                        <option>General Question</option>
+                        <option>Other</option>
+                    </select>
+
+                    <label>Message</label>
+                    <textarea placeholder="Tell us what's on your mind..."></textarea>
+
+                    <button class="btn" style="width:100%;text-align:center;" onclick="handleSubmit(this)">Send Message</button>
+                </div>
+
+                <!-- Success message (hidden by default) -->
+                <div id="successMsg" style="display:none;text-align:center;padding:50px 30px;background:#f4f9f4;border-radius:10px;border:1.5px solid #b8ddb8;">
+                    <p style="font-family:'Montserrat',sans-serif;font-size:22px;font-weight:900;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;">Message Sent ✓</p>
+                    <p style="color:#555;font-size:14px;line-height:24px;">We got it. Expect a reply within 24 hours. In the meantime, go browse the drop.</p>
+                    <a href="products.html" class="btn" style="margin-top:20px;display:inline-block;">Browse Products</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- FAQ STRIP -->
+<div style="background:#0d0d0d;padding:80px 0;">
+    <div class="container">
+        <div class="section-title light">
+            <h2>Quick Answers</h2>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;margin-top:40px;">
+            <div style="padding:28px;background:#1a1a1a;border-radius:10px;border-left:3px solid #563434;">
+                <h4 style="font-family:'Montserrat',sans-serif;font-size:13px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#fff;margin-bottom:12px;">Do you restock sold-out items?</h4>
+                <p style="font-size:13px;color:#888;line-height:22px;">No. Once a drop is gone, it's gone. That's the point. Sign up for drop notifications to stay ahead.</p>
+            </div>
+            <div style="padding:28px;background:#1a1a1a;border-radius:10px;border-left:3px solid #563434;">
+                <h4 style="font-family:'Montserrat',sans-serif;font-size:13px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#fff;margin-bottom:12px;">How long does delivery take?</h4>
+                <p style="font-size:13px;color:#888;line-height:22px;">Within Gaborone: 2–3 days. Rest of Botswana: 5–7 days. International: 10–14 days.</p>
+            </div>
+            <div style="padding:28px;background:#1a1a1a;border-radius:10px;border-left:3px solid #563434;">
+                <h4 style="font-family:'Montserrat',sans-serif;font-size:13px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#fff;margin-bottom:12px;">Can I return or exchange?</h4>
+                <p style="font-size:13px;color:#888;line-height:22px;">Exchanges on unworn items within 7 days. No returns on limited drops. Email us with your order number.</p>
+            </div>
+            <div style="padding:28px;background:#1a1a1a;border-radius:10px;border-left:3px solid #563434;">
+                <h4 style="font-family:'Montserrat',sans-serif;font-size:13px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#fff;margin-bottom:12px;">Interested in a collab?</h4>
+                <p style="font-size:13px;color:#888;line-height:22px;">We're open to the right conversations. Drop us a message with your idea and we'll take a look.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Olympus Garments</h4>
+                <p>Built for the streets. Ready for whatever. No rules. Just fits.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="products.html">All Products</a></li>
+                    <li><a href="products.html#shirts">Shirts</a></li>
+                    <li><a href="products.html#pants">Pants</a></li>
+                    <li><a href="products.html#hoodies">Hoodies</a></li>
+                    <li><a href="products.html#sweaters">Sweaters</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Info</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="intro.html">Latest Drops</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>Gaborone, Botswana<br>info@olympusgarments.com<br>+267 XXX XXXX</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Olympus Garments. All rights reserved.</p>
+            <p>Wear the city. Own the noise.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    function updateCartCount() {
+        const cart = JSON.parse(localStorage.getItem('ogCart') || '[]');
+        document.getElementById('cartCount').textContent = cart.reduce((a, i) => a + i.qty, 0);
+    }
+
+    function handleSubmit(btn) {
+        document.querySelector('.contact-form').style.display = 'none';
+        document.getElementById('successMsg').style.display = 'block';
+    }
+
+    updateCartCount();
+</script>
+</body>
 </html>
