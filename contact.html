@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact — Olympus Garments</title>
     <link rel="stylesheet" href="style.css">
-     <script src="script.js"></script>
 </head>
 <body>
 
@@ -192,5 +191,18 @@
         </div>
     </div>
 </footer>
+    <script>
+    function updateCartCount() {
+        const cart = JSON.parse(localStorage.getItem('ogCart') || '[]');
+        document.getElementById('cartCount').textContent = cart.reduce((a, i) => a + i.qty, 0);
+    }
+
+    function handleSubmit(btn) {
+        document.querySelector('.contact-form').style.display = 'none';
+        document.getElementById('successMsg').style.display = 'block';
+    }
+
+    updateCartCount();
+</script>
 </body>
 </html>
